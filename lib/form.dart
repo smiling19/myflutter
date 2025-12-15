@@ -16,6 +16,12 @@ class _MyFormState extends State<MyForm> {
       appBar: AppBar(
         title: Center(child: Text('Form Đăng nhập')),
         backgroundColor: Colors.blueAccent,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       body: Form(
         key: _formKey,

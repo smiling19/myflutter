@@ -32,11 +32,7 @@ class _MyProfileState extends State<MyProfile> {
   }
 
   void _logout() {
-    Navigator.pushAndRemoveUntil(
-      context,
-      MaterialPageRoute(builder: (context) => MyLogin()),
-      (route) => false,
-    );
+    Navigator.pop(context);
   }
 
   @override

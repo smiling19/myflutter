@@ -14,6 +14,12 @@ class __CountNumberAppState extends State<DemSo> {
       appBar: AppBar(
         title: const Text("Ứng dụng Đếm số"),
         centerTitle: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       body: Center(
         child: Column(

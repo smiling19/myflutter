@@ -34,6 +34,12 @@ class _MyProductState extends State<MyProduct> {
       backgroundColor: Color(0xFFF5F5F5),
 
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         backgroundColor: Colors.white,
         elevation: 0,
         titleSpacing: 15,
@@ -45,6 +51,7 @@ class _MyProductState extends State<MyProduct> {
             border: Border.all(color: Colors.black, width: 1.5),
             borderRadius: BorderRadius.circular(3),
           ),
+          
           child: Row(
             children: [
               SizedBox(width: 10),

@@ -10,11 +10,7 @@ class ColorChangerApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Ứng dụng Đổi màu nền',
-      home: const ColorChangerScreen(),
-    );
+    return const ColorChangerScreen();
   }
 }
 
@@ -62,7 +58,13 @@ class _ColorChangerScreenState extends State<ColorChangerScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Ứng dụng Đổi màu nền'),
-        backgroundColor: Colors.teal,
+        backgroundColor: const Color.fromARGB(255, 104, 133, 130),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       body: AnimatedContainer(
         duration: const Duration(milliseconds: 400),

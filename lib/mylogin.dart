@@ -57,7 +57,15 @@ class _MyLoginState extends State<MyLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Đăng nhập")),
+      appBar: AppBar(
+        title: Text("Đăng nhập"),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(

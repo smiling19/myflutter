@@ -78,6 +78,12 @@ class _CountdownTimerAppState extends State<DemNguocSo> {
       appBar: AppBar(
         title: Text("⏳ Bộ đếm thời gian"),
         centerTitle: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(24.0),
