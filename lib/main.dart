@@ -36,20 +36,20 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Trang Chủ"),
+        title:Text("Trang Chủ"),
         backgroundColor: Colors.blue,
       ),
 
-      drawer: const MyDrawer(),
+      drawer: MyDrawer(),
 
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             Icon(Icons.flutter_dash, size: 100, color: Colors.blue),
             SizedBox(height: 20),
             Text(
-              "Chào mừng bạn!",
+              "Lê Hoài Phương - 22T1020337",
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
           ],
