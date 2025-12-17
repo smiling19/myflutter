@@ -1,35 +1,15 @@
 import 'package:flutter/material.dart';
-
-// --- IMPORT CÁC FILE THEO CẤU TRÚC BÀI TẬP ---
-
-// Bài 1
 import 'myplace.dart';
-
-// Bài 2
-import 'my_classroom.dart'; // Bạn kiểm tra lại tên file này trong máy nhé
-
-// Bài 3
+import 'my_classroom.dart';
 import 'mywelcome.dart';
-
-// Bài 4
 import 'changecolor.dart';
-import 'demnguocso.dart'; // Nếu chưa có file này thì comment dòng này lại
+import 'demnguocso.dart';
 import 'demso.dart';
-
-// Bài 5
-import 'register.dart'; // DangKi.png
-import 'form.dart';     // DangNhap.png (Form UI)
-
-// Bài 6
-import 'my_product.dart';    // api.dart, product.dart (API)
-// import 'list_product.dart';  // DanhSachSanPham (Tĩnh)
-
-// Bài 7
-import 'routing.dart'; // Tin tức API
-
-// Bài 8
-import 'mylogin.dart'; // Login API -> Chuyển sang Profile
-
+import 'register.dart';
+import 'form.dart';
+import 'my_product.dart';
+import 'routing.dart';
+import 'mylogin.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -40,7 +20,6 @@ class MyDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          // --- HEADER ---
           UserAccountsDrawerHeader(
             accountName: const Text("Menu Bài Tập"),
             accountEmail: const Text("Lê Hoài Phương - 22T1020337"),
@@ -84,7 +63,7 @@ class MyDrawer extends StatelessWidget {
           //BÀI 4
           ExpansionTile(
             leading: const Icon(Icons.folder, color: Colors.amber),
-            title: const Text("Bài 4: Chức năng cơ bản"),
+            title: const Text("Bài 4: StatefulWidget"),
             children: [
               ListTile(
                 contentPadding: const EdgeInsets.only(left: 32),
@@ -101,7 +80,6 @@ class MyDrawer extends StatelessWidget {
                 title: const Text('Đếm Ngược Số'),
                 onTap: () {
                   Navigator.pop(context);
-                  // Kiểm tra tên Class trong file demnguocso.dart
                   Navigator.push(context, MaterialPageRoute(builder: (context) => DemNguocSo())); 
                 },
               ),
@@ -125,7 +103,7 @@ class MyDrawer extends StatelessWidget {
               ListTile(
                 contentPadding: const EdgeInsets.only(left: 32),
                 leading: const Icon(Icons.app_registration),
-                title: const Text('Đăng Ký (Register)'),
+                title: const Text('Register'),
                 onTap: () {
                   Navigator.pop(context);
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const MyRegister()));
@@ -134,7 +112,7 @@ class MyDrawer extends StatelessWidget {
               ListTile(
                 contentPadding: const EdgeInsets.only(left: 32),
                 leading: const Icon(Icons.login),
-                title: const Text('Đăng Nhập (Form Only)'),
+                title: const Text('Login'),
                 onTap: () {
                   Navigator.pop(context);
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const MyForm()));
@@ -166,8 +144,8 @@ class MyDrawer extends StatelessWidget {
 
           //BÀI 8
           ListTile(
-            leading: const Icon(Icons.folder, color: Colors.redAccent),
-            title: const Text('Bài 8: Hệ thống User'),
+            leading: const Icon(Icons.folder, color: Colors.amber),
+            title: const Text('Bài 8: Login (API)'),
             subtitle: const Text('Login API -> Profile'),
             onTap: () {
               Navigator.pop(context);
